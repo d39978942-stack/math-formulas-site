@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرمول‌ها | Math & Physics</title>
+
+<!-- SEO -->
+<meta name="description" content="فرمول های ریاضی، فیزیک، هندسه، حسابان، جستجو و دسته بندی کامل برای دانش آموزان.">
+<meta name="keywords" content="فرمول ریاضی, فرمول فیزیک, هندسه, حسابان, نهی, کنکور">
+
+<style>
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+}
+header {
+    background: #1E88E5;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+}
+.container {
+    padding: 15px;
+}
+
+.category {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px #00000020;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1E88E5;
+}
+
+.formula {
+    background: #e3f2fd;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    direction: ltr;
+    font-weight: bold;
+}
+
+.search-box {
+    margin: 15px 0;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<header>فرمول‌ها - Math & Physics</header>
+
+<div class="container">
+
+    <!-- SEARCH -->
+    <div class="search-box">
+        <input type="text" id="search" placeholder="جستجو بین فرمول‌ها ...">
+    </div>
+
+    <!-- CATEGORY: ریاضی -->
+    <div class="category">
+        <h2>ریاضی</h2>
+        <div class="formula">a² + b² = c²</div>
+        <div class="formula">Δ = b² - 4ac</div>
+        <div class="formula">sin²x + cos²x = 1</div>
+        <div class="formula">S = πr²</div>
+    </div>
+
+    <!-- CATEGORY: حسابان -->
+    <div class="category">
+        <h2>حسابان</h2>
+        <div class="formula">f'(x) = lim (f(x+h)-f(x))/h</div>
+        <div class="formula">∫ xⁿ dx = xⁿ⁺¹/(n+1) + C</div>
+        <div class="formula">d/dx (sin x) = cos x</div>
+    </div>
+
+    <!-- CATEGORY: فیزیک -->
+    <div class="category">
+        <h2>فیزیک</h2>
+        <div class="formula">F = ma</div>
+        <div class="formula">V = d/t</div>
+        <div class="formula">E = mc²</div>
+        <div class="formula">P = F/A</div>
+    </div>
+
+    <!-- CATEGORY: هندسه -->
+    <div class="category">
+        <h2>هندسه</h2>
+        <div class="formula">مساحت مثلث = (b × h) / 2</div>
+        <div class="formula">محیط دایره = 2πr</div>
+        <div class="formula">tanθ = مقابل/مجاور</div>
+    </div>
+
+</div>
+
+<script>
+document.getElementById("search").addEventListener("keyup", function () {
+    let value = this.value.toLowerCase();
+    let formulas = document.querySelectorAll(".formula");
+
+    formulas.forEach(f => {
+        let txt = f.innerText.toLowerCase();
+        f.style.display = txt.includes(value) ? "block" : "none";
+    });
+});
+</script>
+
+</body>
+</html>
